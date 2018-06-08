@@ -9,8 +9,8 @@ module.exports = {
     baseUrl: '/resume-editor/',
   
     // where to output built files
-    outputDir: 'dist',
+    outputDir: './dist',
   
     // where to put static assets (js/css/img/font/...)
-    assetsDir: './static',
+    assetsDir: 'static',
 }
