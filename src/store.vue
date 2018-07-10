@@ -5,10 +5,11 @@ Vue.use(Vuex)
 export default  new Vuex.Store({
   state: {
     resume:{
-    profile: [{'姓名':'','年龄':'','关于':''}],
-    schooles:[{'学校':'','时间':'','学位':''}],
-    jobs:[{'公司':'','时间':'','职责':''}],
-    skills:[{'技能':'','兴趣':'','其他':''}]}
+    profile: [{'姓名':'测试内容','年龄':'测试内容','关于':'测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容'}],
+    schooles:[{'学校':'测试内容','时间':'测试内容','学位':'测试内容'}],
+    jobs:[{'公司':'测试内容','时间':'测试内容','职责':'测试内容'}],
+    skills:[{'技能':'测试内容','兴趣':'测试内容','其他':'测试内容'}]},
+    path:null
   },
   mutations: {
     setData (state,n) {
@@ -37,9 +38,10 @@ export default  new Vuex.Store({
     deleteList (state,n){
         let s = n.title
         let t = n.index
-        console.log(state.resume[s])
-        console.log(t)
         state.resume[s].splice(t,1)
+    },
+    setPath(state,n){
+        state.path = n
     }
   }
 })

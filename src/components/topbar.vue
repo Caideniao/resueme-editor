@@ -3,8 +3,8 @@
         <div>RESUMEEDITOR</div>
         <ul>
             <el-row>
-                <el-button type="primary" plain>注册</el-button>
-                <el-button type="primary" plain>登录</el-button>                
+                <el-button type="primary" plain @click="signUp">注册</el-button>
+                <el-button type="primary" plain @click="logIn">登录</el-button>                
             </el-row>   
             </ul>        
         </nav>
@@ -13,6 +13,16 @@
 <script>
 export default {
     name: 'topbar',
+    methods:{
+        signUp(){
+            window.history.pushState({state:'/signUp'},null,'/signUp')
+            this.$store.commit('setPath','/signUp')
+        },
+        logIn(){
+            window.history.pushState({state:'/logIn'},null,'/logIn')
+            this.$store.commit('setPath','/logIn')
+        }
+    }
 }
 </script>
 
